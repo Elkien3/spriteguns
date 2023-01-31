@@ -1,4 +1,5 @@
 Spriteguns: a mod for Minetest that adds guns using moving animated image_waypoints for visuals/aimpoints.
+High Resolution Texture pack is available at https://elkien3.com/hiresguns.zip, do '/spritegunscale .2' ingame to fix scaling issue.
 
 Using the guns:
 	There are two main ways guns are loaded: through magazines or by inserting the ammunition directly into the firearm.
