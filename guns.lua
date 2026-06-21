@@ -64,7 +64,7 @@ spriteguns.register_gun("spriteguns:remington870",{
 	description = "Remington 870 Shotgun",
 	inventory_image = "rem870_inv.png",
 	zoomfov = 60,
-	scale = 7.5,
+	scale = 5.5,
 	range = 100,
 	fire_sound = "rem870_fire",
 	fire_gain = 10,
@@ -140,7 +140,7 @@ spriteguns.register_gun("spriteguns:thompson",{
 	description = "Thompson Submachine gun",
 	inventory_image = "thompson_inv.png",
 	zoomfov = 60,
-	scale = 7.5,
+	scale = 5.5,
 	range = 200,
 	fire_sound = "thompson_fire",
 	fire_sound_distant = "distant_local",
@@ -225,7 +225,7 @@ spriteguns.register_gun("spriteguns:cz527",{
 	description = "CZ 527 Rifle",
 	inventory_image = "cz527_inv.png",
 	zoomfov = 20,
-	scale = 7.5,
+	scale = 5.5,
 	range = 400,
 	fire_sound = "cz527_fire",
 	fire_gain = 10,
@@ -312,8 +312,8 @@ minetest.register_craft({
 spriteguns.register_gun("spriteguns:mini14",{
 	description = "Mini-30 Rifle",
 	inventory_image = "mini14_inv.png",
-	zoomfov = 60,
-	scale = 7.5,
+	zoomfov = 45,
+	scale = 5.5,
 	range = 300,
 	fire_sound = "mini14_fire",
 	fire_gain = 10,
@@ -338,7 +338,7 @@ spriteguns.register_gun("spriteguns:mini14",{
 		hipfire = "hipfire.png",
 		hippostfire = "hipidle.png",
 		aimidle = "aimidle.png",
-		aimidlenomag = "aimidle.png",
+		aimidlenomag = "aimidlenomag.png",
 		aimfire = "aimfire.png",
 		aimpostfire = "aimidle.png",
 		load = {
@@ -349,13 +349,13 @@ spriteguns.register_gun("spriteguns:mini14",{
 		reload = {
 			length = 8*.25,
 			speed = .75,
-			sounds = {"thompson_load", nil, nil, nil, nil, "thompson_charge"},
+			sounds = {nil, nil, "thompson_load", nil, nil, "thompson_charge"},
 			frames = {"reload4.png", "reload3.png", "reload2.png", "reload1.png", "load1.png", "load2.png", "load3.png", "load4.png"}
 		},
 		unload = {
 			length = 4*.25,
 			speed = .75,
-			sounds = {"thompson_unload"},
+			sounds = {nil, "thompson_unload"},
 			frames = {"reload1.png", "reload2.png", "reload3.png", "reload4.png"},
 		},
 	},
@@ -384,7 +384,7 @@ end
 
 minetest.register_tool("spriteguns:mag_mini14", {
 	description = "Mini-30 Magazine",
-	inventory_image = "rangedweapons_ak47_mag.png",
+	inventory_image = "spriteguns_mini30_mag.png",
 })
 spriteguns.register_magazine("spriteguns:mag_mini14", "spriteguns:bullet_762", 15)
 minetest.register_craft({
@@ -397,10 +397,10 @@ minetest.register_craft({
 })
 
 spriteguns.register_gun("spriteguns:pardini",{
-	description = "Pardini Pistol",
+	description = "Pardini GT45 Pistol",
 	inventory_image = "pardini_inv.png",
 	zoomfov = 60,
-	scale = 7.5,
+	scale = 5.5,
 	range = 200,
 	fire_sound = "pardini_fire",
 	fire_gain = 10,
@@ -412,11 +412,11 @@ spriteguns.register_gun("spriteguns:pardini",{
 	offsetrecoil = 60,
 	targetrecoil = 30,
 	damage = 5,
-	maxdev = .12,
+	maxdev = .10,
 	maxzoomdev = .04,
 	magazine = true,
 	concealed = true,
-	spread = 4,
+	spread = 2,
 	textures = {
 		prefix = "pardini_",
 		hipidle = "hipidle.png",
@@ -484,7 +484,7 @@ spriteguns.register_gun("spriteguns:coltarmy",{
 	description = "Colt Army Revolver",
 	inventory_image = "coltarmy_inv.png",
 	zoomfov = 60,
-	scale = 7.5,
+	scale = 5.5,
 	range = 200,
 	fire_sound = "coltarmy_fire",
 	fire_gain = 10,
@@ -530,7 +530,7 @@ spriteguns.register_gun("spriteguns:coltarmy",{
 			loopstart = 2,
 			loopend = 3,
 			sounds = {nil, nil, "gunslinger_charge"},
-			frames = {"reload1.png", "reload3.png", "reload4.png", "reload1.png", }
+			frames = {"load4.png", "reload3.png", "unload1.png", "reload1.png", }
 		},
 	},
 })
@@ -559,7 +559,7 @@ spriteguns.register_gun("spriteguns:binoculars",{
 	description = "Binoculars",
 	inventory_image = "binoculars_binoculars.png",
 	zoomfov = 20,
-	scale = 7.5,
+	scale = 5.5,
 	targetrecoil = 10,
 	maxdev = .12,
 	maxzoomdev = .01,
